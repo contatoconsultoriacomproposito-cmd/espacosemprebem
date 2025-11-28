@@ -1,0 +1,374 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Terapia Integrativa - [Nome da Terapeuta]</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    
+    <style>
+        :root {
+            --color-primary: #9015bd; /* Roxo Intenso */
+            --color-secondary: #add7f0; /* Azul Bebê Claro */
+        }
+        .bg-primary { background-color: var(--color-primary); }
+        .text-primary { color: var(--color-primary); }
+        .border-primary { border-color: var(--color-primary); }
+        .hover\:bg-primary-dark:hover { background-color: #7a119e; } /* Roxo um pouco mais escuro para hover */
+        
+        .bg-secondary { background-color: var(--color-secondary); }
+        .text-secondary { color: var(--color-secondary); }
+
+        /* Estilo para tornar o player de vídeo responsivo */
+        .video-container {
+            position: relative;
+            padding-bottom: 56.25%; /* 16:9 Aspect Ratio */
+            height: 0;
+            overflow: hidden;
+            max-width: 100%;
+            background: black;
+        }
+        .video-container video {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+    </style>
+</head>
+<body class="font-sans antialiased text-gray-800">
+
+    <header class="sticky top-0 z-50 bg-white shadow-lg">
+        <nav class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <a href="#capa" class="text-2xl font-bold text-primary">
+                <i class="fas fa-hand-holding-heart mr-2"></i>Essência Terapêutica
+            </a>
+            <div class="hidden md:flex space-x-8 items-center font-medium">
+                <a href="#sobre" class="hover:text-primary transition duration-300">Sobre Mim</a>
+                <a href="#prova-social" class="hover:text-primary transition duration-300">Prova Social</a>
+                <a href="#cursos" class="hover:text-primary transition duration-300">Cursos & Treinamentos</a> <a href="#depoimentos" class="hover:text-primary transition duration-300">Depoimentos</a>
+                <a href="#contato" class="bg-primary hover:bg-primary-dark text-white px-4 py-2 rounded-lg transition duration-300">
+                    <i class="fas fa-phone mr-1"></i> Contato
+                </a>
+            </div>
+            <button id="mobile-menu-btn" class="md:hidden text-2xl text-primary">
+                <i class="fas fa-bars"></i>
+            </button>
+        </nav>
+        <div id="mobile-menu" class="hidden md:hidden bg-white shadow-lg border-t border-gray-100">
+            <a href="#sobre" class="block py-2 px-6 hover:bg-gray-50">Sobre Mim</a>
+            <a href="#prova-social" class="block py-2 px-6 hover:bg-gray-50">Prova Social</a>
+            <a href="#cursos" class="block py-2 px-6 hover:bg-gray-50">Cursos & Treinamentos</a> <a href="#depoimentos" class="block py-2 px-6 hover:bg-gray-50">Depoimentos</a>
+            <a href="#contato" class="block py-2 px-6 hover:bg-gray-50 bg-primary text-white">Contato</a>
+        </div>
+    </header>
+
+    <main>
+        <section id="capa" class="relative pt-24 pb-12 md:pt-32 md:pb-24" style="background-color: var(--color-secondary);">
+            <div class="container mx-auto px-6 flex flex-col md:flex-row items-center justify-between gap-12">
+                <div class="md:w-1/2 order-2 md:order-1 text-center md:text-left">
+                    <h1 class="text-4xl lg:text-5xl font-extrabold text-gray-900 leading-tight mb-4">
+                        Decifre a <span class="text-primary">Linguagem do Seu Corpo:</span> Emoções e Dores
+                    </h1>
+                    <p class="text-xl text-gray-700 mb-8">
+                        Há 10 anos como <strong class="font-semibold">Terapeuta Comportamental Sistêmica</strong>, transformando sintomas físicos em caminhos para a cura emocional.
+                    </p>
+                    <a href="#cursos" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transition duration-300 transform hover:scale-105">
+                        <i class="fas fa-lightbulb mr-2"></i> Conheça os Cursos
+                    </a>
+                </div>
+                <div class="md:w-1/2 order-1 md:order-2 flex justify-center">
+                    <img src="img/Terapeuta.jpg" alt="[Nome da Terapeuta]" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-white">
+                </div>
+            </div>
+        </section>
+
+        <section id="sobre" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                    <i class="fas fa-spa text-primary mr-2"></i>Minha Missão e Abordagem
+                </h2>
+                <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-4 text-center">
+                    <p>
+                        Sou especialista em <strong class="font-semibold">Comportamento Sistêmico</strong>, utilizando a <strong class="font-semibold">Massoterapia</strong> e a <strong class="font-semibold">Reflexoterapeuta</strong> como ferramentas para ir além do sintoma. Minha abordagem é a de identificar a <strong class="font-semibold">raiz emocional</strong> de cada manifestação física.
+                    </p>
+                    <p class="font-semibold text-primary">
+                        Com expertise nas pontuações de ação e reação, ajudo você a mapear a <strong class="font-semibold">psicossomática dos seus trejeitos físicos</strong>, integrando saberes de datas, números e as influências do sol, da lua e da Terra para um diagnóstico verdadeiramente holístico.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+                <section id="prova-social" class="py-16 md:py-24 bg-gray-100">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                    <i class="fas fa-handshake text-primary mr-2"></i>Transformações Reais, Futuros Brilhantes
+                </h2>
+                <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+                    
+                    <div>
+                        <h3 class="text-2xl font-semibold text-gray-800 mb-6 text-center md:text-left">
+                            <i class="fas fa-play-circle text-primary mr-2"></i>Depoimentos de clientes
+                        </h3>
+                        <div class="video-container rounded-xl shadow-2xl">
+                            <video controls preload="metadata">
+                                <source src="https://huggingface.co/datasets/consultoriacomproposito/meus-videos-site/resolve/main/ESPACOSEMPREBEM.mp4" type="video/mp4">
+                                Desculpe, seu navegador não suporta o vídeo. Por favor, atualize ou tente outro navegador.
+                            </video>
+                        </div>
+                        <p class="text-center mt-4 text-gray-600 italic">Entenda como a abordagem sistêmica transformou uma vida.</p>
+                    </div>
+
+                    <div class="bg-white p-8 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col items-center text-center h-full justify-center">
+                        <img src="img/aluno.jpeg" alt="Foto do Aluno de Referência" class="w-40 h-40 rounded-full object-cover mb-6 border-4 border-secondary shadow-md">
+                        <h3 class="text-2xl font-bold text-primary mb-3">Antes aluno e agora professor</h3>
+                        <p class="text-lg text-gray-700 italic mb-6">
+                            "Fui aluno da Antonia Mendes e isso mudou tanto minha vida que hoje atuo na área como professor!"
+                        </p>
+                        <p class="text-md font-semibold text-gray-600">— Especialista em Terapia Corporal Sistêmica</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+        <hr class="border-t border-gray-200 my-4 mx-auto w-3/4">
+
+        <section id="cursos" class="py-16 md:py-24 bg-secondary">
+            <div class="container mx-auto px-6">
+                <h2 class="text-4xl font-extrabold text-center mb-16 text-gray-900">
+                    <i class="fas fa-graduation-cap text-primary mr-2"></i>Certifique-se em Terapia Integrativa
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col h-full">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-shoe-prints"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Curso Reflexologia Podal Trejeito</h3>
+                        <p class="text-sm font-semibold text-gray-600 mb-4 inline-block px-3 py-1 bg-secondary rounded-full">100% Online</p>
+                        
+                        <ul class="text-gray-700 space-y-2 mb-6 flex-grow">
+                            <li><i class="fas fa-clock text-primary mr-2"></i> **Duração:** 2 meses</li>
+                            <li><i class="fas fa-hourglass-half text-primary mr-2"></i> **Carga Horária:** 4h por semana</li>
+                            <li><i class="fas fa-certificate text-primary mr-2"></i> Certificado Digital Incluído</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/5511964087144?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Curso%20de%20Reflexologia%20Podal%20Trejeito." 
+                           target="_blank" 
+                           class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                            <i class="fab fa-whatsapp mr-2"></i> Matricular-se (Online)
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col h-full">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-hand-holding-medical"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Treinamento Massagem Terapêutica (Tratamento)</h3>
+                        <p class="text-sm font-semibold text-white mb-4 inline-block px-3 py-1 bg-primary rounded-full">Presencial</p>
+                        
+                        <ul class="text-gray-700 space-y-2 mb-6 flex-grow">
+                            <li><i class="fas fa-clock text-primary mr-2"></i> **Duração:** 2 meses (2x por semana)</li>
+                            <li><i class="fas fa-hourglass-half text-primary mr-2"></i> **Carga Horária:** 64 horas</li>
+                            <li><i class="fas fa-user-friends text-primary mr-2"></i> Inclui Miofacial e Ventosaterapia (32h)</li>
+                            <li><i class="fas fa-certificate text-primary mr-2"></i> Certificado Digital Incluído</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/5511964087144?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Treinamento%20Presencial%20de%20Massagem%20Terap%C3%AAutica." 
+                           target="_blank" 
+                           class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                            <i class="fab fa-whatsapp mr-2"></i> Fale Conosco (Presencial)
+                        </a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-2xl border-t-8 border-primary flex flex-col h-full">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-brain"></i></div>
+                        <h3 class="text-xl font-bold mb-2">Curso Comportamental Sistêmica e Psicanálise</h3>
+                        <p class="text-sm font-semibold text-gray-600 mb-4 inline-block px-3 py-1 bg-secondary rounded-full">100% Online</p>
+                        
+                        <ul class="text-gray-700 space-y-2 mb-6 flex-grow">
+                            <li><i class="fas fa-clock text-primary mr-2"></i> **Duração:** 10 meses</li>
+                            <li><i class="fas fa-video text-primary mr-2"></i> 1 Aula em vídeo por semana (10 módulos)</li>
+                            <li><i class="fas fa-award text-primary mr-2"></i> Prova final via Zoom</li>
+                            <li><i class="fas fa-certificate text-primary mr-2"></i> Certificado Digital Incluído</li>
+                        </ul>
+                        
+                        <a href="https://wa.me/5511964087144?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Curso%20Comportamental%20Sist%C3%AAmica%20e%20Psican%C3%A1lise." 
+                           target="_blank" 
+                           class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                            <i class="fab fa-whatsapp mr-2"></i> Inscreva-se Agora
+                        </a>
+                    </div>
+                    
+                </div>
+                
+                </div>
+        </section>
+        <hr class="border-t border-gray-200 my-4 mx-auto w-3/4">
+
+        <section id="detalhes-abordagem" class="py-16 md:py-24 bg-gray-50">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                    <i class="fas fa-feather-pointed text-primary mr-2"></i>Detalhes da Abordagem Única
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-eye-low-vision"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Identificação de Traços Ocultos e Reflexos</h3>
+                        <p class="text-gray-600 mb-4">
+                            Metodologia para identificar <strong class="font-semibold">traços de caráter</strong> e <strong class="font-semibold">expressões reflexo</strong> que o corpo manifesta, revelando a personalidade e os desafios emocionais mais profundos de cada indivíduo.
+                        </p>
+                        <a href="#cursos" class="text-primary font-semibold hover:text-purple-700">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+                    
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-hand-sparkles"></i></div>
+                        <h3 class="text-xl font-bold mb-3">A Psicossomática da Ação-Reação no Corpo</h3>
+                        <p class="text-gray-600 mb-4">
+                            Você irá aprender as *expertises* das pontuações de <strong class="font-semibold">ação e reação</strong>, desvendando o mapa <strong class="font-semibold">psicossomático dos trejeitos</strong> e sintomas físicos que indicam bloqueios emocionais.
+                        </p>
+                        <a href="#cursos" class="text-primary font-semibold hover:text-purple-700">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary">
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-globe-americas"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Saberes Cósmicos e a Influência da Terra</h3>
+                        <p class="text-gray-600 mb-4">
+                            Tenha acesso aos saberes dos <strong class="font-semibold">números, datas</strong> e a forte <strong class="font-semibold">influência da lua, do sol, dos animais e do planeta Terra</strong> na sua energia vital e nos seus ciclos de saúde.
+                        </p>
+                        <a href="#cursos" class="text-primary font-semibold hover:text-purple-700">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-gray-200 my-4 mx-auto w-3/4">
+
+        <section id="corpo-fala" class="py-16 md:py-24" style="background-color: var(--color-secondary);">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                    <i class="fas fa-puzzle-piece text-primary mr-2"></i>O Mapa Emocional das Dores Físicas
+                </h2>
+                <p class="text-xl text-center text-gray-700 mb-8 max-w-3xl mx-auto">
+                    Nosso trabalho se baseia em uma verdade: o corpo é o mensageiro da alma. Analisamos como a repressão e o medo se instalam em áreas vitais, causando a dor:
+                </p>
+                
+                <div class="flex justify-center items-center mb-10">
+                    
+                </div>
+
+                <div class="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-4 mt-6 text-center">
+                    <div class="p-3 rounded-lg bg-white border border-primary/50 shadow-md">
+                        <p class="font-bold text-primary">CABEÇA:</p><p class="text-sm">Estresse, Tensão, Omissão.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-white border border-primary/50 shadow-md">
+                        <p class="font-bold text-primary">PEITO:</p><p class="text-sm">Amor não correspondido, Luto.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-white border border-primary/50 shadow-md">
+                        <p class="font-bold text-primary">COSTAS:</p><p class="text-sm">Falta de apoio, Raiva.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-white border border-primary/50 shadow-md">
+                        <p class="font-bold text-primary">JOELHO:</p><p class="text-sm">Orgulho, Medo de Avançar.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-white border border-primary/50 shadow-md">
+                        <p class="font-bold text-primary">QUADRIL:</p><p class="text-sm">Medo da Mudança e Movimento.</p>
+                    </div>
+                    <div class="p-3 rounded-lg bg-white border border-primary/50 shadow-md">
+                        <p class="font-bold text-primary">PÉS:</p><p class="text-sm">Aterramento e Equilíbrio.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr class="border-t border-gray-200 my-4 mx-auto w-3/4">
+
+        <section id="depoimentos" class="py-16 md:py-24 bg-primary text-white">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12">
+                    <i class="fas fa-star-half-stroke mr-2"></i>Resultados que Transformam
+                </h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    
+                    <div class="bg-white text-gray-800 p-6 rounded-xl shadow-xl border-b-4 border-secondary">
+                        <p class="italic mb-4">"Eu estava com muitas dores articulares e triste. As técnicas aplicadas pela <strong class="font-semibold">Antonia Mendes</strong>, fez eu me sentir feliz e aliviada"</p>
+                        <p class="font-bold text-primary">- Lúcia F.</p>
+                    </div>
+                    
+                    <div class="bg-white text-gray-800 p-6 rounded-xl shadow-xl border-b-4 border-secondary">
+                        <p class="italic mb-4">"Fiz meu primeiro curso em 2024 de reflexologia podal e hoje eu <strong class="font-semibold">Atuo com reflexologia podal graças a Antonia Mendes</strong>. Recomendo a todos!"</p>
+                        <p class="font-bold text-primary">- Fernanda M.</p>
+                    </div>
+
+                    <div class="bg-white text-gray-800 p-6 rounded-xl shadow-xl border-b-4 border-secondary">
+                        <p class="italic mb-4">"Eu tinha uma criança muito agitada e soube do trabalho da <strong class="font-semibold">Antonia Mendes</strong> que transformou a vida do meu filho. Hoje ele tem 10 anos é extremamente educado, dócil e um ótimo filho."</p>
+                        <p class="font-bold text-primary">- Patrícia S.</p>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <section id="contato" class="py-16 md:py-24">
+            <div class="container mx-auto px-6">
+                <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
+                    <i class="fas fa-message text-primary mr-2"></i>Quero Decifrar Meu Corpo
+                </h2>
+                
+                <div class="max-w-xl mx-auto bg-white p-8 rounded-xl shadow-2xl border-t-8 border-primary">
+                    <p class="text-center text-xl text-gray-600 mb-6">
+                        Agende sua consulta ou solicite mais informações sobre os cursos!
+                    </p>
+                    <form action="#" method="POST" class="space-y-4">
+                        <div>
+                            <label for="nome" class="block text-sm font-medium text-gray-700">Nome Completo</label>
+                            <input type="text" id="nome" name="nome" placeholder="Seu nome" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="email" class="block text-sm font-medium text-gray-700">Email</label>
+                            <input type="email" id="email" name="email" placeholder="seuemail@exemplo.com" class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary">
+                        </div>
+                        <div>
+                            <label for="mensagem" class="block text-sm font-medium text-gray-700">Qual seu maior interesse?</label>
+                            <textarea id="mensagem" name="mensagem" rows="4" placeholder="Tenho interesse em agendar uma sessão de reflexoterapia..." class="mt-1 block w-full px-3 py-2 border border-gray-300 rounded-md shadow-sm focus:ring-primary focus:border-primary"></textarea>
+                        </div>
+                        <button type="submit" class="w-full bg-secondary hover:bg-opacity-80 text-gray-900 font-bold py-3 rounded-md transition duration-300 shadow-md">
+                            Enviar Pedido <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+
+                    <div class="mt-6 text-center border-t pt-4">
+                        <p class="text-sm text-gray-500 mb-3">Conexão Imediata:</p>
+                        <a href="https://wa.me/5511964087144" target="_blank" class="inline-flex items-center text-lg text-green-500 hover:text-green-600 transition duration-300 mr-4">
+                            <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
+                        </a>
+                        <a href="mailto:SEU_EMAIL" class="inline-flex items-center text-lg text-primary hover:text-purple-700 transition duration-300">
+                            <i class="fas fa-envelope text-2xl mr-2"></i> Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <footer class="bg-gray-900 text-white py-8">
+        <div class="container mx-auto px-6 text-center text-sm">
+            <p>&copy; 2025 Essência Terapêutica. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.getElementById('mobile-menu-btn').addEventListener('click', function() {
+            document.getElementById('mobile-menu').classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(item => {
+            item.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+
+</body>
+</html>
