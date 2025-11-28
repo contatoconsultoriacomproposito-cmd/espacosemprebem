@@ -9,16 +9,26 @@
     
     <style>
         :root {
-            --color-primary: #9015bd; /* Roxo Intenso */
-            --color-secondary: #add7f0; /* Azul Bebê Claro */
+            /* Novas Cores Baseadas no Azul/Ciano */
+            --color-primary: #07497a; /* Azul Escuro */
+            --color-secondary: #a5cef2; /* Azul Médio Claro */
+            --color-tertiary: #c0eddd; /* Azul Claro (Ciano) */
+            /* Tons Explorados como Substituto do Rosa/Roxo */
+            --color-accent: #c29b9d; /* Cinza/Marrom Claro (Substituto Rosa) */
+            --color-neutral-dark: #595959; /* Cinza Escuro */
         }
+        /* Definição de Classes para as novas cores */
         .bg-primary { background-color: var(--color-primary); }
         .text-primary { color: var(--color-primary); }
         .border-primary { border-color: var(--color-primary); }
-        .hover\:bg-primary-dark:hover { background-color: #7a119e; } /* Roxo um pouco mais escuro para hover */
+        .hover\:bg-primary-dark:hover { background-color: #042e4d; } /* Azul Escuro um pouco mais escuro para hover */
         
         .bg-secondary { background-color: var(--color-secondary); }
         .text-secondary { color: var(--color-secondary); }
+        .border-secondary { border-color: var(--color-secondary); }
+        
+        .bg-tertiary { background-color: var(--color-tertiary); }
+        .text-tertiary { color: var(--color-tertiary); }
 
         /* Estilo para tornar o player de vídeo responsivo */
         .video-container {
@@ -35,6 +45,7 @@
             left: 0;
             width: 100%;
             height: 100%;
+            /* object-fit: cover; FOI REMOVIDO AQUI PARA EVITAR O ZOOM/CORTE */
         }
     </style>
 </head>
@@ -73,13 +84,13 @@
                         Decifre a <span class="text-primary">Linguagem do Seu Corpo:</span> Emoções e Dores
                     </h1>
                     <p class="text-xl text-gray-700 mb-8">
-                        Há 10 anos como <strong class="font-semibold">Terapeuta Comportamental Sistêmica</strong>, transformando sintomas físicos em caminhos para a cura emocional.
+                        Há 16 anos como <strong class="font-semibold">Psicanalista e Terapeuta Comportamental Sistêmica</strong>, transformando sintomas físicos em caminhos para a cura emocional. 
                     </p>
                     <a href="#cursos" class="bg-primary hover:bg-primary-dark text-white font-bold py-3 px-8 rounded-full text-lg shadow-xl transition duration-300 transform hover:scale-105">
                         <i class="fas fa-lightbulb mr-2"></i> Conheça os Cursos
                     </a>
                 </div>
-                <div class="md:w-1/2 order-1 md:order-2 flex flex-col items-center justify-center"> <img src="img/Terapeuta.jpg" alt="Antonia Mendes" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-white">
+                <div class="md:w-1/2 order-1 md:order-2 flex flex-col items-center justify-center"> <img src="img/terapeuta-4.png" alt="Antonia Mendes" class="rounded-full w-64 h-64 md:w-80 md:h-80 object-cover shadow-2xl border-4 border-white">
                     <p class="mt-4 text-xl font-bold text-gray-900">Antonia Mendes</p> </div>
             </div>
         </section>
@@ -91,16 +102,17 @@
                 </h2>
                 <div class="max-w-4xl mx-auto text-lg text-gray-700 space-y-4 text-center">
                     <p>
-                        Sou especialista em <strong class="font-semibold">Comportamento Sistêmico</strong>, utilizando a <strong class="font-semibold">Massoterapia</strong> e a <strong class="font-semibold">Reflexoterapeuta</strong> como ferramentas para ir além do sintoma. Minha abordagem é a de identificar a <strong class="font-semibold">raiz emocional</strong> de cada manifestação física.
+                        Sou <strong>Psicanalista</strong> e especialista em <strong>Comportamento Sistêmico</strong>. Utilizo a <strong>Massoterapia</strong> e a <strong>Reflexoterapia</strong> como ferramentas de intervenção, administrando cursos e treinamentos nessas e em outras áreas como a <strong>Ventosaterapia</strong>, para ir além do sintoma.
+                        Minha abordagem é rigorosa: identificar a <strong>raiz emocional</strong> de cada manifestação física, baseada em um profundo mapeamento da <strong>psicossomática</strong> individual.
                     </p>
                     <p class="font-semibold text-primary">
-                        Com expertise nas pontuações de ação e reação, ajudo você a mapear a <strong class="font-semibold">psicossomática dos seus trejeitos físicos</strong>, integrando saberes de datas, números e as influências do sol, da lua e da Terra para um diagnóstico verdadeiramente holístico.
+                        Com expertise nas dinâmicas de ação e reação, ajudo você a decifrar a <strong>linguagem do seu corpo</strong>. Todo o trabalho é fundamentado em <strong>estudos e metodologias com viés científico</strong>, integrando o conhecimento da Psicanálise com a Terapia Comportamental Sistêmica, afastando qualquer ideia de misticismo ou pseudociência.
                     </p>
                 </div>
             </div>
         </section>
         
-                <section id="prova-social" class="py-16 md:py-24 bg-gray-100">
+        <section id="prova-social" class="py-16 md:py-24 bg-gray-100">
             <div class="container mx-auto px-6">
                 <h2 class="text-3xl font-bold text-center mb-12 text-gray-900">
                     <i class="fas fa-handshake text-primary mr-2"></i>Transformações Reais, Futuros Brilhantes
@@ -147,14 +159,14 @@
                         <p class="text-sm font-semibold text-gray-600 mb-4 inline-block px-3 py-1 bg-secondary rounded-full">100% Online</p>
                         
                         <ul class="text-gray-700 space-y-2 mb-6 flex-grow">
-                            <li><i class="fas fa-clock text-primary mr-2"></i> **Duração:** 2 meses</li>
-                            <li><i class="fas fa-hourglass-half text-primary mr-2"></i> **Carga Horária:** 4h por semana</li>
+                            <li><i class="fas fa-clock text-primary mr-2"></i> <strong>Duração:</strong> 2 meses</li>
+                            <li><i class="fas fa-hourglass-half text-primary mr-2"></i> <strong>Carga Horária:</strong> 4h por semana</li>
                             <li><i class="fas fa-certificate text-primary mr-2"></i> Certificado Digital Incluído</li>
                         </ul>
                         
                         <a href="https://wa.me/5511964087144?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Curso%20de%20Reflexologia%20Podal%20Trejeito." 
-                           target="_blank" 
-                           class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                            target="_blank" 
+                            class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i> Matricular-se (Online)
                         </a>
                     </div>
@@ -165,15 +177,15 @@
                         <p class="text-sm font-semibold text-white mb-4 inline-block px-3 py-1 bg-primary rounded-full">Presencial</p>
                         
                         <ul class="text-gray-700 space-y-2 mb-6 flex-grow">
-                            <li><i class="fas fa-clock text-primary mr-2"></i> **Duração:** 2 meses (2x por semana)</li>
-                            <li><i class="fas fa-hourglass-half text-primary mr-2"></i> **Carga Horária:** 64 horas</li>
+                            <li><i class="fas fa-clock text-primary mr-2"></i> <strong>Duração:</strong> 2 meses (2x por semana)</li>
+                            <li><i class="fas fa-hourglass-half text-primary mr-2"></i> <strong>Carga Horária:</strong> 64 horas</li>
                             <li><i class="fas fa-user-friends text-primary mr-2"></i> Inclui Miofacial e Ventosaterapia (32h)</li>
                             <li><i class="fas fa-certificate text-primary mr-2"></i> Certificado Digital Incluído</li>
                         </ul>
                         
                         <a href="https://wa.me/5511964087144?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Treinamento%20Presencial%20de%20Massagem%20Terap%C3%AAutica." 
-                           target="_blank" 
-                           class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                            target="_blank" 
+                            class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i> Fale Conosco (Presencial)
                         </a>
                     </div>
@@ -184,15 +196,15 @@
                         <p class="text-sm font-semibold text-gray-600 mb-4 inline-block px-3 py-1 bg-secondary rounded-full">100% Online</p>
                         
                         <ul class="text-gray-700 space-y-2 mb-6 flex-grow">
-                            <li><i class="fas fa-clock text-primary mr-2"></i> **Duração:** 10 meses</li>
+                            <li><i class="fas fa-clock text-primary mr-2"></i> <strong>Duração:</strong> 10 meses</li>
                             <li><i class="fas fa-video text-primary mr-2"></i> 1 Aula em vídeo por semana (10 módulos)</li>
                             <li><i class="fas fa-award text-primary mr-2"></i> Prova final via Zoom</li>
                             <li><i class="fas fa-certificate text-primary mr-2"></i> Certificado Digital Incluído</li>
                         </ul>
                         
                         <a href="https://wa.me/5511964087144?text=Ol%C3%A1%2C%20gostaria%20de%20saber%20mais%20sobre%20o%20Curso%20Comportamental%20Sist%C3%AAmica%20e%20Psican%C3%A1lise." 
-                           target="_blank" 
-                           class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
+                            target="_blank" 
+                            class="mt-auto bg-primary hover:bg-primary-dark text-white font-bold py-3 rounded-lg text-center transition duration-300 transform hover:scale-105">
                             <i class="fab fa-whatsapp mr-2"></i> Inscreva-se Agora
                         </a>
                     </div>
@@ -217,7 +229,7 @@
                         <p class="text-gray-600 mb-4">
                             Metodologia para identificar <strong class="font-semibold">traços de caráter</strong> e <strong class="font-semibold">expressões reflexo</strong> que o corpo manifesta, revelando a personalidade e os desafios emocionais mais profundos de cada indivíduo.
                         </p>
-                        <a href="#cursos" class="text-primary font-semibold hover:text-purple-700">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
+                        <a href="#cursos" class="text-primary font-semibold hover:text-primary-dark">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
                     </div>
                     
                     <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary">
@@ -226,16 +238,16 @@
                         <p class="text-gray-600 mb-4">
                             Você irá aprender as *expertises* das pontuações de <strong class="font-semibold">ação e reação</strong>, desvendando o mapa <strong class="font-semibold">psicossomático dos trejeitos</strong> e sintomas físicos que indicam bloqueios emocionais.
                         </p>
-                        <a href="#cursos" class="text-primary font-semibold hover:text-purple-700">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
+                        <a href="#cursos" class="text-primary font-semibold hover:text-primary-dark">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
                     </div>
 
                     <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition duration-300 border-t-4 border-primary">
-                        <div class="text-4xl text-primary mb-4"><i class="fas fa-globe-americas"></i></div>
-                        <h3 class="text-xl font-bold mb-3">Saberes Cósmicos e a Influência da Terra</h3>
+                        <div class="text-4xl text-primary mb-4"><i class="fas fa-vial-circle-check"></i></div>
+                        <h3 class="text-xl font-bold mb-3">Análise Comportamental e Científica</h3>
                         <p class="text-gray-600 mb-4">
-                            Tenha acesso aos saberes dos <strong class="font-semibold">números, datas</strong> e a forte <strong class="font-semibold">influência da lua, do sol, dos animais e do planeta Terra</strong> na sua energia vital e nos seus ciclos de saúde.
+                            Tenha acesso a uma abordagem que prioriza a **Psicanálise e a Análise Comportamental Sistêmica** com foco em metodologias com **comprovação e viés científico**, garantindo profundidade e seriedade no diagnóstico e tratamento.
                         </p>
-                        <a href="#cursos" class="text-primary font-semibold hover:text-purple-700">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
+                        <a href="#cursos" class="text-primary font-semibold hover:text-primary-dark">Ver Ofertas <i class="fas fa-angle-right ml-1"></i></a>
                     </div>
 
                 </div>
@@ -342,7 +354,7 @@
                         <a href="https://wa.me/5511964087144" target="_blank" class="inline-flex items-center text-lg text-green-500 hover:text-green-600 transition duration-300 mr-4">
                             <i class="fab fa-whatsapp text-2xl mr-2"></i> WhatsApp
                         </a>
-                        <a href="mailto:SEU_EMAIL" class="inline-flex items-center text-lg text-primary hover:text-purple-700 transition duration-300">
+                        <a href="mailto:SEU_EMAIL" class="inline-flex items-center text-lg text-primary hover:text-primary-dark transition duration-300">
                             <i class="fas fa-envelope text-2xl mr-2"></i> Email
                         </a>
                     </div>
@@ -372,5 +384,3 @@
 </body>
 
 </html>
-
-
